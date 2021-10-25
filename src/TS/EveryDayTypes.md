@@ -84,3 +84,27 @@ function name():never{
 ```
 
 의 형태로 쓴다
+
+# Interface에서 Generics사용하기
+
+```tsx
+interface Items<T> {
+  list: T[];
+}
+
+const items: Items<string> = {
+  list: ["a", "b", "c"],
+};
+```
+
+# Type에서 Generics 사용하기
+
+```tsx
+type Items<T> = {
+  list: T[];
+};
+
+const items: Items<string> = {
+  list: ["a", "b", "c"],
+};
+```
